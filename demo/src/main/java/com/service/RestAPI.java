@@ -11,12 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 public class RestAPI {
-	public static void main(String[] a) {
-		/** */
-		String get_res = get();
-		System.out.println(get_res);
-
-	}
 
 	public static String get() {
 		String uri = "https://public.bitbank.cc";

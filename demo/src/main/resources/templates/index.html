@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Thymeleaf test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<script src="/js/jquery-3.3.1.min.js" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript">
+
+function color(){
+	$('#step').css('color', '#ff0000');
+};
+
+</script>
+<p th:text="'これは' + ${test} + 'です。'">start</p>
+<div id="step">test</div>
+<p>
+<input type="button" value="動作確認" onclick="color()">
+</p>
+</body>
+</html>

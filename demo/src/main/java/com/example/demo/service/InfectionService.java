@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.model.Infection;
 import com.example.demo.repository.InfectionRepository;
@@ -24,5 +25,9 @@ public class InfectionService {
 
 		    return infectionRepository.findAll();
 		  }
+	 public List<Infection> findNameInfection(@RequestParam("name")String name){
+		 return infectionRepository
+				 .findByName(name);
+	 }
 
 }

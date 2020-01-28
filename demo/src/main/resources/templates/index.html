@@ -3,32 +3,35 @@
 <head>
 
 <title>Thymeleaf test</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<link href="/css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet"></link>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/css/lib/bootstrap.css" th:href="@{/css/lib/bootstrap.css}"
+	rel="stylesheet"></link>
 </head>
 <body>
-<script src="/js/jquery-3.3.1.min.js" th:src="@{/js/jquery-3.3.1.min.js}"></script>
-<script src="/js/bootstrap.js" th:src="@{/js/bootstrap.js}"></script>
-<script type="text/javascript">
+	<script src="/js/lib/jquery-3.3.1.min.js"
+		th:src="@{/js/lib/jquery-3.3.1.min.js}"></script>
+	<script src="/js/lib/jquery.jqGrid.min.js"
+		th:src="@{/js/lib/jquery.jqGrid.min.js}"></script>
+	<script src="/js/lib/bootstrap.js" th:src="@{/js/lib/bootstrap.js}"></script>
+	<script src="/js/sample.js" th:src="@{/js/sample.js}"></script>
+	<script
+		src="https://js.cybozu.com/jqgrid/v5.1.1/js/jquery.jqGrid.min.js"></script>
 
-function color(){
-	$('#step').css('color', '#ff0000');
-};
-
-</script>
-<p th:text="'これは' + ${test} + 'です。'">start</p>
-<div id="step">test</div>
-<p>
-<input type="button" value="動作確認" onclick="color()">
-</p>
-<header style="background-color:gray">Header</header>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-5" style="background-color:red;">Red</div>
-    <div class="col-sm-4" style="background-color:blue;">Blue</div>
-    <div class="col-sm-3" style="background-color:yellow;">Yellow</div>
-  </div>
-</div>
-<footer style="background-color:gray">Footer</footer>
+	<p th:text="'これは' + ${test} + 'です。'">start</p>
+	<div id="step">test</div>
+	<p>
+		<input type="button" value="動作確認" onclick="color()"> <input
+			type="button" value="テーブル作成" onclick="gridtab()">
+	</p>
+	<table id="grid"></table>
+	<header style="background-color: gray">Header</header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-5" style="background-color: red;">Red</div>
+			<div class="col-sm-4" style="background-color: blue;">Blue</div>
+			<div class="col-sm-3" style="background-color: yellow;">Yellow</div>
+		</div>
+	</div>
+	<footer style="background-color: gray">Footer</footer>
 </body>
 </html>

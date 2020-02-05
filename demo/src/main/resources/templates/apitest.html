@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Thymeleaf test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/css/lib/bootstrap.css" th:href="@{/css/lib/bootstrap.css}"
+	rel="stylesheet"></link>
+	<link href="/css/lib/swiper/swiper.min.css" th:href="@{/css/lib/swiper/swiper.min.css}"
+	rel="stylesheet"></link>
+</head>
+<body>
+<form name="fm">
+    <label>名前：<input type="text" name="name" size="15"></label>
+    <input type="button" id="btnsend" name="submit" value="送信" onclick="asyncSend()">
+</form>
+<div id="result"></div>
+<p th:text="'これは' + ${test} + 'です。'">start</p>
+</body>
+
+</html>

@@ -2,14 +2,13 @@ package com.example.demo.controller;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-
-@RestController
-public class WebApiController {
-
-	@RequestMapping("/")
+public class ApitestController {
+	@RequestMapping("/apitest")
 	public String index(Model model) {
-		return "login";
+		String test = "test";
+		model.addAttribute("test", test);
+		return "index";
 	}
+
 }

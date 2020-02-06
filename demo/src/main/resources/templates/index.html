@@ -6,6 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="/css/lib/bootstrap.css" th:href="@{/css/lib/bootstrap.css}"
 	rel="stylesheet"></link>
+	<link href="/css/lib/swiper/swiper.min.css" th:href="@{/css/lib/swiper/swiper.min.css}"
+	rel="stylesheet"></link>
 </head>
 <body>
 	<script src="/js/lib/jquery-3.3.1.min.js"
@@ -14,8 +16,12 @@
 		th:src="@{/js/lib/jquery.jqGrid.min.js}"></script>
 	<script src="/js/lib/bootstrap.js" th:src="@{/js/lib/bootstrap.js}"></script>
 	<script src="/js/sample.js" th:src="@{/js/sample.js}"></script>
+
 	<script
 		src="https://js.cybozu.com/jqgrid/v5.1.1/js/jquery.jqGrid.min.js"></script>
+	<script src="/js/lib/jquery.jqGrid.min.js"
+		th:src="@{/js/lib/jquery.jqGrid.min.js}"></script>
+
 
 	<p th:text="'これは' + ${test} + 'です。'">start</p>
 	<div id="step">test</div>
@@ -33,5 +39,22 @@
 		</div>
 	</div>
 	<footer style="background-color: gray">Footer</footer>
+        <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="/img/angular_picture.png" alt=""></div>
+            <div class="swiper-slide"><img src="/img/xcode.png" alt=""></div>
+            <div class="swiper-slide"><img src="/img/Java.png" alt=""></div>
+            ...
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <div class="textLayer"></div>
+    <script src="/js/lib/swiper/swiper.min.js" th:src="@{/js/lib/swiper/swiper.min.js}"></script>
+    <script src="/js/init.js" th:src="@{/js/init.js}"></script>
 </body>
 </html>

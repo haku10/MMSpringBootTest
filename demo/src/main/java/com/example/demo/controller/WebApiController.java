@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,8 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WebApiController {
 
 	@RequestMapping("/")
-	private String hello() {
-		return "SpringBoot!";
+	public String index(Model model) {
+		return "login";
 	}
-
 }

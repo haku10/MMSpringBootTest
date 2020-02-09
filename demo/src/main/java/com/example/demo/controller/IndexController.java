@@ -18,12 +18,17 @@ public class IndexController {
 	@Autowired
 	InfectionService infectionservice;
 
-	@RequestMapping("/index")
-	public String index(Model model) {
-		String name = "TEST1";
-		List<Infection> infectionlist = infectionservice.findNameInfection(name);
-		model.addAttribute("test", infectionlist.get(0).getName());
+	@RequestMapping("/")
+	public String root(Model model) {
+		model.addAttribute("test", "最初の見開き");
 		return "index";
+	}
+
+	@RequestMapping("/top")
+	public String index(Model model) {
+		List<Infection> infectionlist = infectionservice.findAllinfectionData();
+		model.addAttribute("test", infectionlist.get(0).getName());
+		return "top";
 	}
 
 }

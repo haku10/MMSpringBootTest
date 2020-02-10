@@ -21,13 +21,14 @@ public class InfectionService {
 	 * 全選択
 	 *
 	 */
-	  public List<Infection> findAllinfectionData(){
+	public List<Infection> findAllinfectionData(){
 
-		    return infectionRepository.findAll();
-		  }
-	 public List<Infection> findNameInfection(@RequestParam("name")String name){
-		 return infectionRepository
-				 .findByName(name);
-	 }
+		return infectionRepository.findAll();
+	}
+
+	public List<Infection> findNameInfection(@RequestParam("name")String name){
+		return infectionRepository
+				.findByName(name);
+	}
 
 }
